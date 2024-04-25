@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto; 
+}
+
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(131, 96, 226, 0.39);
+    width: 100%;
+    height: 50px;
+}
+
+h1 {
+    color: #4a1287;
+    font-size: 50px;
+    margin: 0;
+}
+
+.inputBtn {
+    position: relative;
+}
+
+.inputBtn img {
+    cursor: pointer;
+}
+
+input {
+    width: 340px;
+    border-radius: 25px;
+    height: 25px;
+    background-color: rgb(218 207 247);
+    border: 1px solid rgb(131, 96, 226);
+}
+
+input:focus {
+    outline-color: #4a1287;
+}
+
+#search::placeholder {
+    color: #8e3ae7;
+    font-size: medium;
+}
+
+#search {
+    padding-left: 10px;
+    overflow-x: auto;
+}
+
+.searchBtn {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 290px;
+    padding: 5px;
+}
+
+.crossBtn {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 1px;
+    left: 325px;
+    padding: 5px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 1400px;
+    padding: 25px 0;
+}
+
+.photo-gallery img  {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.footer-text {
+    font-size: 40px;
+    margin: 0;
+}
+
+footer {
+    background-color: rgba(131, 96, 226, 0.39);
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-icon {
+    height: 50px;
+    display: flex;
+}
+
+/* Adaptive */
+
+@media (max-width: 600px) {
+
+    .main {
+        width: 600px;
+    }
+}
