@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-ico" href="assets/img/favicon.ico">
+    <title>Random Game</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header">
+                <h1 class="header-text">Random Game</h1>
+            </div>
+        </header>
+        <img class="background" src="assets/img/moon.com.png" alt="Moon" height="700" width="1000">
+        <img class="background2" src="assets/img/pngwing.com.png" alt="Mice" height="740" width="1100">
+        <img class="background3" src="assets/img/text.com.png" alt="Text: Happy Halloween" height="400" width="400">
+        <img class="background1" src="assets/img/cat.com.png" alt="Cat" height="400" width="400">
+        <div class="wrapper">
+            <div class="name-game">
+                <p class="name-game-text">Game - Snake</p>
+            </div>
+            <div class="container" id="container">
+                <div class="container-text">
+                    <p class="container-text-start">Game Start</p>
+                    <p class="container-text-over">Game Over</p>
+                    <p class="container-text-win">You Win!!!</p>
+                    <p class="container-text-score score">Score - 000</p>
+                    <img class="container-icon" src="assets/img/loadedIcon.png" alt="Reload Icon" width="30" height="30">
+                </div>
+                <canvas id="gameCanvas" width="450" height="450"></canvas>
+                <div class="modallSettings">
+                    <img class="cross-settings" src="assets/img/crossSettings.png" alt="Cross Settings">
+                    <div class="border-settings">
+                        <h2 class="text-settings">Styles :</h2>
+                        <div class="style-list">
+                            <label>
+                                <span class="text-list">Standard</span>
+                                <input type="radio" name="style" value="standard" checked>
+                            </label>
+                            <label>
+                                <span class="text-list">Halloween</span>
+                                <input type="radio" name="style" value="halloween">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modallScore">
+                    <img class="cross-score" src="assets/img/crossSettings.png" alt="Cross Score">
+                    <div class="border-score">
+                        <h2 class="text-score">Score :</h2>
+                        <div class="table-score">
+                            <ol class="text-score-list" id="gamesList"></ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="buttonPlay" id="buttonPlay">
+                    <p class="btn-text">Play</p>
+                </button>
+                <button class="buttonScore">
+                    <p class="btn-text">Score - 000</p>
+                </button>
+            </div>
+            <div class="game-control">
+                <img class="upBtn" id="upBtn" src="assets/img/upBtn.png">
+                <div class="controls-left-right">
+                    <img class="leftBtn" id="leftBtn" src="assets/img/leftBtn.png">
+                    <img class="rightBtn" id="rightBtn" src="assets/img/rightBtn.png">
+                </div>
+                <img class="downBtn" id="downBtn" src="assets/img/downBtn.png">
+            </div>
+            <button class="buttonSettings">
+                <p class="btn-text-set">Settings</p>
+            </button>
+        </div>
+        <footer>
+            <div class="footer">
+                <a href="https://github.com/ViktoriiaYermak" target="_blank" class="footer-text"><img src="assets/img/iconGitHub.png" alt="GitHun icon" class="footer-icon"></a>
+                <p class="footer-text">© 2023</p>
+                <a href="https://rs.school/js-stage0/" target="_blank" class="footer-text"><img src="assets/img/rs_school_js.svg" alt="RSschool icon" class="footer-icon"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/fileSettings.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

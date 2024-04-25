@@ -1,0 +1,471 @@
+body {
+    font-family: 'Sedgwick Ave Display', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.no-scroll {
+    overflow: hidden !important;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #5076ff, #ff00008f);
+}
+
+.background {
+    display: none;
+}
+
+.background1 {
+    display: none;
+}
+
+.background2 {
+    display: none;
+}
+
+.background3 {
+    display: none;
+}
+
+/* Header */
+
+.header {
+    background-color: rgb(143 116 203);
+    width: 100%;
+    height: 50px;
+}
+
+.header-text {
+    margin: 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Container */
+
+.wrapper {
+    margin: auto;
+}
+
+.name-game {
+    width: 450px;
+    height: 50px;
+    background: linear-gradient(45deg,#ff00008f, #5076ff);
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+.name-game-text {
+    font-size: 30px;
+    color: white;
+    padding: 6.5px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    background-color: rgb(111 47 139 / 18%);
+    display: grid;
+    position: relative;
+}
+
+.container-text-start {
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    margin: 0;
+}
+
+.container-text-start {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container-text.active .container-text-start{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container-text-over {
+    display: none;
+    font-size: 50px;
+    color: white;
+    margin: 165px 115px;
+    position: absolute;
+}
+
+.container-text-score {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    margin: 235px 140px 0;
+}
+
+.container-text-win {
+    display: none;
+    font-size: 50px;
+    color: white;
+    margin: 195px 125px;
+    position: absolute;
+}
+
+.container-icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin: 290px 210px 0;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.container-icon:hover {
+    transform: scale(1.1);
+}
+
+.snake {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(40, 155, 184);
+    position: absolute;
+    z-index: 1;
+}
+
+.food {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(49, 3, 53);
+    position: absolute;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-text {
+    font-size: 30px;
+    color: white;
+    margin: 6.5px auto;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+button {
+    border: none;
+}
+
+.buttonPlay {
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(45deg,#ff00008f, #5076ff);
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.buttonPlay:hover {
+    transform: scale(1.1);
+}
+
+.buttonScore {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(45deg,#ff00008f, #5076ff);
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.buttonScore:hover {
+    transform: scale(1.1);
+}
+
+.buttonSettings {
+    width: 450px;
+    height: 50px;
+    background: linear-gradient(45deg,#ff00008f, #5076ff);
+    margin: 25px auto;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.buttonSettings:hover {
+    transform: scale(1.1);
+}
+
+.btn-text-set {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display', cursive;
+    margin: 0;
+    padding: 6.5px;
+}
+
+/* Footer */
+
+.footer-text {
+    font-size: 30px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    background-color: rgb(201 114 156);
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-icon {
+    height: 50px;
+    display: flex;
+}
+
+/* Modal Settings */
+
+.modallSettings {
+    background: linear-gradient(45deg,#5076ff, #ff0000);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 17%;
+    left: 17%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modallSettings.open {
+    background: linear-gradient(45deg,#5076ff, #ff0000);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 17%;
+    left: 17%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.cross-settings {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cross-settings:hover {
+    transform: scale(1.1);
+}
+
+.border-settings {
+    margin: 30px;
+    width: 240px;
+    height: 240px;
+    border: 1px solid #8e75f2;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: 20px;
+    font-size: 30px;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    padding: 0;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.text-list {
+    margin: 15px;
+    color: white;
+    font-size: 26px;
+}
+
+/* Modal Score */
+
+.modallScore {
+    background: linear-gradient(45deg,#5076ff, #ff0000);
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modallScore.open {
+    background: linear-gradient(45deg,#5076ff, #ff0000);
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+}
+
+.cross-score {
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cross-score:hover {
+    transform: scale(1.1);
+}
+
+.border-score {
+    margin: 30px;
+    width: 390px;
+    height: 390px;
+    border: 1px solid #8e75f2;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.table-score {
+    width: 270px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.text-score-list {
+    color: white;
+    max-height: 300px;
+    overflow: auto;
+    margin: 0;
+}
+
+.text-score-list-table {
+    margin: 10px;
+    padding-left: 40px;
+    
+}
+
+.score-number {
+   padding-left: 40px; 
+}
+
+/* Controls Game for adaptive */
+
+.game-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    display: none;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.controls-left-right {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.upBtn,
+.downBtn,
+.leftBtn,
+.rightBtn {
+    width: 60px;
+    height: 60px;
+}
+
+.upBtn {
+    transform: rotate(270deg);
+}
+
+.downBtn {
+    transform: rotate(90deg);
+}
+
+.leftBtn {
+    transform: rotate(180deg);
+}
+
+/* Adaptive */
+
+@media (max-width: 768px) {
+
+    .buttonSettings {
+        margin: 0 auto;
+    }
+
+    .game-control {
+        display: flex;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .buttonSettings {
+        width: 405px;
+        display: flex;
+    }
+
+    .btn-text-set {
+        padding: 6.5px 140px;
+    }
+
+    .buttonScore {
+        margin-right: 25px;
+    }
+
+    .buttonPlay {
+        margin-left: 25px;
+    }
+
+    .game-control {
+        display: flex;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .main {
+        width: 450px;
+    }
+}
+
+@media (max-height: 900px) {
+
+    .main {
+        height: 900px;
+    }
+}
