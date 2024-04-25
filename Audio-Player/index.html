@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&family=Mooli&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-ico" href="assets/img/favicon.ico">
+    <title>Audio Player</title>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="container">
+                <img class="img-song" id="img-song" src="assets/img/img_song_metallica.jpg" alt="Metallica song photo">
+                <div class="name-author-song">
+                    <span id="artist-song" class="name-author-song-text">Metallica</span>
+                    <span id="title-song" class="name-author-song-text1">Enter Sandman</span>
+                </div>
+                <input class="line-song" type="range" min="0" max="100" value="0">
+                <audio id="my-audio" controls>
+                    <source id="audio-source" src="assets/audio/Metallica - Enter Sandman.mp3" type="audio/mp3">
+                </audio>
+                <span class="time-song">0:00 / 3:33</span>
+                <div class="audio-btn">
+                    <svg class="audio-btn-prew" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M15.8746 8.11857C16.3147 7.79342 16.9374 8.10759 16.9374 8.65476V14.2575C16.9374 14.3669 17.062 14.4297 17.15 14.3647L25.6038 8.11857C26.0439 7.79342 26.6666 8.10759 26.6666 8.65476V23.3451C26.6666 23.8923 26.0438 24.2064 25.6038 23.8813L17.15 17.6346C17.062 17.5695 16.9374 17.6324 16.9374 17.7418L16.9375 23.3451C16.9375 23.8923 16.3147 24.2064 15.8746 23.8813L5.93381 16.5358C5.57316 16.2693 5.57317 15.7299 5.93383 15.4634L15.8746 8.11857Z" fill="#F5F5F5"/>
+                    </svg>
+                    <svg class="audio-btn-play" id="audio-btn-play" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M10.6666 6.6548C10.6666 6.10764 11.2894 5.79346 11.7295 6.11861L24.377 15.4634C24.7377 15.7298 24.7377 16.2692 24.377 16.5357L11.7295 25.8813C11.2894 26.2065 10.6666 25.8923 10.6666 25.3451L10.6666 6.6548Z" fill="#F5F5F5"/>
+                    </svg>
+                    <svg class="audio-btn-pause" id="audio-btn-pause" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M8.66667 6.66667C8.29848 6.66667 8 6.96514 8 7.33333V24.6667C8 25.0349 8.29848 25.3333 8.66667 25.3333H12.6667C13.0349 25.3333 13.3333 25.0349 13.3333 24.6667V7.33333C13.3333 6.96514 13.0349 6.66667 12.6667 6.66667H8.66667Z" fill="#F5F5F5"/>
+                        <path d="M19.3333 6.66667C18.9651 6.66667 18.6667 6.96514 18.6667 7.33333V24.6667C18.6667 25.0349 18.9651 25.3333 19.3333 25.3333H23.3333C23.7015 25.3333 24 25.0349 24 24.6667V7.33333C24 6.96514 23.7015 6.66667 23.3333 6.66667H19.3333Z" fill="#F5F5F5"/>
+                    </svg>
+                    <svg class="audio-btn-next" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M16.1254 8.11866C15.6853 7.7935 15.0625 8.10768 15.0625 8.65484V14.2576C15.0625 14.367 14.938 14.4298 14.85 14.3648L6.39621 8.11866C5.95613 7.7935 5.33337 8.10768 5.33337 8.65484V23.3452C5.33337 23.8923 5.95616 24.2065 6.39623 23.8813L14.85 17.6347C14.938 17.5696 15.0625 17.6325 15.0625 17.7419L15.0625 23.3452C15.0625 23.8923 15.6853 24.2065 16.1254 23.8813L26.0662 16.5358C26.4268 16.2694 26.4268 15.73 26.0662 15.4635L16.1254 8.11866Z" fill="#F5F5F5"/>
+                    </svg>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <a href="https://github.com/ViktoriiaYermak" target="_blank" class="footer-text"><img src="assets/img/iconGitHub.png" alt="GitHun icon" class="footer-icon"></a>
+                <p class="footer-text">© 2023</p>
+                <a href="https://rs.school/js-stage0/" target="_blank" class="footer-text"><img src="assets/img/rs_school_js.svg" alt="RSschool icon" class="footer-icon"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

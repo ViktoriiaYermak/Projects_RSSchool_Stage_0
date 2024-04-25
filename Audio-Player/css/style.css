@@ -1,0 +1,172 @@
+html {
+    position: relative;
+    background-attachment: fixed;
+    background-color: #326674;
+}
+
+html::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/background_img_metallica.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mooli', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow: auto;
+
+}
+
+/* Main */
+
+main {
+    margin: auto;
+}
+
+.container {
+    background-color: rgb(40, 43, 42);
+    background-color: rgb(79 166 191 / 25%);
+    background-color: rgb(50 102 116);
+    box-shadow: 0px 0px 10px rgba(116, 173, 219, 0.5);
+    box-shadow: 0px 0px 10px rgb(0 220 255);
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.img-song {
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+    border-radius: inherit;
+}
+
+.name-author-song {
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-author-song-text {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.name-author-song-text1 {
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.line-song {
+    width: 300px;
+    height: 10px;
+    margin: 0 auto;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#my-audio {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.time-song {
+    color: white;
+    margin: 0 21px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.audio-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.audio-btn-play:hover,
+.audio-btn-pause:hover,
+.audio-btn-prew:hover,
+.audio-btn-next:hover {
+    opacity: 0.7;
+    fill: black;
+}
+
+.audio-btn-play:active,
+.audio-btn-pause:active,
+.audio-btn-prew:active,
+.audio-btn-next:active {
+    opacity: 0.6;
+}
+
+.audio-btn-play {
+    width: 50px;
+    height: 50px;
+}
+
+.audio-btn-pause {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(79 166 191 / 53%);
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-icon {
+    height: 50px;
+}
+
+/* Adaptive */
+
+@media (max-width: 400px) {
+
+    .wrapper {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .container {
+        min-width: 350px;
+        margin: auto;
+    }
+
+    footer {
+        min-width: 350px;
+    }
+}
